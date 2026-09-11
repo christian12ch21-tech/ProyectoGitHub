@@ -466,6 +466,202 @@ main {
     color: #0d0d12;
 }
 
+/* ===== Panel Admin / Perfil ===== */
+.admin-container {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.admin-form-box {
+    background: #fff;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    border: 1px solid #f0f0f2;
+    max-width: 440px;
+}
+
+.admin-form-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-form-box label {
+    margin-top: 14px;
+    font-weight: 600;
+    font-size: 12.5px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.admin-form-box input {
+    padding: 11px 16px;
+    margin-top: 6px;
+    border: 1.5px solid #e4e4e8;
+    border-radius: 10px;
+}
+
+.admin-form-box button {
+    margin-top: 20px;
+    padding: 13px;
+    background-color: #0d0d12;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-right: 10px;
+    transition: all 0.2s ease;
+}
+
+.admin-form-box button:hover {
+    background-color: #f0a500;
+    color: #0d0d12;
+}
+
+.admin-tabla-box {
+    background: #fff;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    border: 1px solid #f0f0f2;
+    overflow-x: auto;
+}
+
+.tabla-admin {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-admin th {
+    text-align: left;
+    padding: 14px 12px;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #999;
+    border-bottom: 2px solid #f0f0f2;
+    font-weight: 700;
+}
+
+.tabla-admin td {
+    text-align: left;
+    padding: 14px 12px;
+    border-bottom: 1px solid #f0f0f2;
+    font-size: 14px;
+}
+
+.tabla-admin button {
+    padding: 7px 14px;
+    margin-right: 6px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12.5px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.btn-editar {
+    background-color: #fff6e5;
+    color: #b8790a;
+}
+
+.btn-editar:hover {
+    background-color: #f0a500;
+    color: #fff;
+}
+
+.btn-eliminar-producto {
+    background-color: #ffe9e7;
+    color: #c0392b;
+}
+
+.btn-eliminar-producto:hover {
+    background-color: #e0483e;
+    color: #fff;
+}
+
+/* ===== Modo oscuro ===== */
+.btn-tema-toggle {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid #333;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    margin-left: 12px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.btn-tema-toggle:hover {
+    border-color: #f0a500;
+    background: rgba(240, 165, 0, 0.1);
+}
+
+body.modo-oscuro {
+    background-color: #0d0d12;
+    color: #eaeaea;
+}
+
+body.modo-oscuro .tarjeta-producto,
+body.modo-oscuro .carrito-section,
+body.modo-oscuro .auth-box,
+body.modo-oscuro .admin-form-box,
+body.modo-oscuro .admin-tabla-box {
+    background-color: #17171f;
+    color: #eaeaea;
+    border-color: #26262f;
+}
+
+body.modo-oscuro .tarjeta-producto p {
+    color: #9a9aa5;
+}
+
+body.modo-oscuro .tarjeta-producto .categoria-tag {
+    background: #2a230f;
+}
+
+body.modo-oscuro .tarjeta-producto .precio {
+    color: #fff;
+}
+
+body.modo-oscuro .item-carrito,
+body.modo-oscuro .tabla-admin th,
+body.modo-oscuro .tabla-admin td {
+    border-color: #26262f;
+}
+
+body.modo-oscuro .controles-cantidad {
+    background: #26262f;
+}
+
+body.modo-oscuro .btn-favorito {
+    background: rgba(20,20,26,0.85);
+}
+
+body.modo-oscuro #btn-vaciar {
+    background-color: #26262f;
+    color: #eaeaea;
+}
+
+body.modo-oscuro .controles-section input,
+body.modo-oscuro .controles-section select,
+body.modo-oscuro .auth-box input,
+body.modo-oscuro .admin-form-box input,
+body.modo-oscuro .cupon-box input {
+    background-color: #1f1f28;
+    color: #eaeaea;
+    border-color: #333340;
+}
+
+
 /* ===== Hero ===== */
 .hero {
     background: linear-gradient(135deg, #0d0d12 0%, #1a1a24 100%);

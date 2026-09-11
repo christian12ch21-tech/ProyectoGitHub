@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const linkPerfil = document.getElementById("link-perfil");
     const linkAdmin = document.getElementById("link-admin");
 
+
+
+    
     if (sesionActual) {
         linkLogin.style.display = "none";
 

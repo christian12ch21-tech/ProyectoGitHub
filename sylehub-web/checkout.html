@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Checkout</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="logo">StyleHub</h1>
+        <nav class="menu">
+            <a href="index.html">Catálogo</a>
+            <button id="btn-tema" class="btn-tema-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <section class="auth-box" style="max-width: 500px;">
+            <h2>Finalizar compra</h2>
+
+            <div id="resumen-pedido"></div>
+            <p class="total">Total a pagar: S/ <span id="total-checkout">0.00</span></p>
+
+            <form id="formulario-checkout">
+                <label for="direccion">Dirección de envío:</label>
+                <input type="text" id="direccion" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" required>
+
+                <label for="metodo-pago">Método de pago:</label>
+                <select id="metodo-pago">
+                    <option value="tarjeta">Tarjeta de crédito/débito</option>
+                    <option value="yape">Yape/Plin</option>
+                    <option value="contraentrega">Contraentrega</option>
+                </select>
+
+                <p id="error-checkout" class="mensaje-error"></p>
+
+                <button type="submit">Confirmar pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 StyleHub. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="js/checkout-init.js"></script>
+</body>
+</html>

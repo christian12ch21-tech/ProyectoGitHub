@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="logo">StyleHub</h1>
+        <nav class="menu">
+            <a href="index.html">Catálogo</a>
+            <a href="login.html" id="link-login">Iniciar sesión</a>
+            <a href="perfil.html" id="link-perfil" style="display:none;">Mi perfil</a>
+            <a href="admin.html" id="link-admin" style="display:none;">⚙ Panel Admin</a>
+            <a href="#carrito">Carrito (<span id="contador-carrito">0</span>)</a>
+            <button id="btn-tema" class="btn-tema-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-contenido">
+            <h2>Nueva Colección 2026</h2>
+            <p>Ropa urbana con estilo, calidad y los mejores precios</p>
+            <a href="#productos" class="hero-boton">Ver catálogo</a>
+        </div>
+    </section>
+
+    <section class="beneficios">
+        <div class="beneficio">🚚 <span>Envío gratis desde S/150</span></div>
+        <div class="beneficio">🔄 <span>Cambios y devoluciones en 15 días</span></div>
+        <div class="beneficio">💳 <span>Paga con tarjeta, Yape o Plin</span></div>
+        <div class="beneficio">⭐ <span>Calidad garantizada</span></div>
+    </section>
+
+    <main>
+        <section id="controles" class="controles-section">
+            <input type="text" id="buscador" placeholder="Buscar producto...">
+
+            <select id="filtro-categoria">
+                <option value="todos">Todas las categorías</option>
+            </select>
+
+            <select id="orden">
+                <option value="">Ordenar por...</option>
+                <option value="precio-asc">Precio: menor a mayor</option>
+                <option value="precio-desc">Precio: mayor a menor</option>
+                <option value="nombre">Nombre (A-Z)</option>
+            </select>
+        </section>
+
+        <section id="productos" class="productos-section">
+            <h2>Nuestros Productos</h2>
+            <div id="lista-productos" class="grid-productos"></div>
+        </section>
+
+        <section id="ofertas" class="productos-section">
+            <h2>Ropa con Descuento 🔥</h2>
+            <div id="lista-ofertas" class="grid-productos"></div>
+        </section>
+
+        <section id="favoritos" class="productos-section">
+            <h2>Mis Favoritos</h2>
+            <div id="lista-favoritos" class="grid-productos"></div>
+        </section>
+
+        <section id="carrito" class="carrito-section">
+            <h2>Carrito de Compras</h2>
+            <div id="lista-carrito"></div>
+
+            <div class="cupon-box">
+                <input type="text" id="input-cupon" placeholder="Código de cupón">
+                <button id="btn-aplicar-cupon">Aplicar</button>
+            </div>
+            <p id="mensaje-cupon"></p>
+
+            <p class="total">Total: S/ <span id="total-carrito">0.00</span></p>
+            <button id="btn-vaciar">Vaciar carrito</button>
+            <button id="btn-checkout">Finalizar compra</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 StyleHub. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

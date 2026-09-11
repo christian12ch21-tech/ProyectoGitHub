@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Iniciar sesión</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="logo">StyleHub</h1>
+        <nav class="menu">
+            <a href="index.html">Catálogo</a>
+            <button id="btn-tema" class="btn-tema-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+
+        <section id="form-login" class="auth-box">
+            <h2>Iniciar sesión</h2>
+            <form id="formulario-login">
+                <label for="login-email">Correo:</label>
+                <input type="email" id="login-email" required>
+
+                <label for="login-password">Contraseña:</label>
+                <input type="password" id="login-password" required>
+
+                <p id="error-login" class="mensaje-error"></p>
+
+                <button type="submit">Ingresar</button>
+            </form>
+            <p>¿No tienes cuenta? <a href="#" id="ir-registro">Regístrate aquí</a></p>
+        </section>
+
+        <section id="form-registro" class="auth-box" style="display:none;">
+            <h2>Crear cuenta</h2>
+            <form id="formulario-registro">
+                <label for="reg-nombre">Nombre completo:</label>
+                <input type="text" id="reg-nombre" required>
+
+                <label for="reg-email">Correo:</label>
+                <input type="email" id="reg-email" required>
+
+                <label for="reg-password">Contraseña:</label>
+                <input type="password" id="reg-password" required>
+
+                <p id="error-registro" class="mensaje-error"></p>
+
+                <button type="submit">Registrarme</button>
+            </form>
+            <p>¿Ya tienes cuenta? <a href="#" id="ir-login">Inicia sesión</a></p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 StyleHub. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

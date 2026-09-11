@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Mi perfil</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="logo">StyleHub</h1>
+        <nav class="menu">
+            <a href="index.html">Catálogo</a>
+            <a href="#" id="btn-cerrar-sesion">Cerrar sesión</a>
+            <button id="btn-tema" class="btn-tema-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+        <section class="admin-form-box" style="max-width: 400px;">
+            <h2>Mi perfil</h2>
+            <p><strong>Nombre:</strong> <span id="perfil-nombre"></span></p>
+            <p><strong>Correo:</strong> <span id="perfil-email"></span></p>
+        </section>
+
+        <section class="admin-tabla-box">
+            <h2>Mis pedidos</h2>
+            <table class="tabla-admin">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Productos</th>
+                        <th>Total</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-mis-pedidos"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 StyleHub. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="js/perfil.js"></script>
+</body>
+</html>

@@ -4,19 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gestor inteligente de inventario</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/app.js" defer></script>
 </head>
 <body>
   <header class="encabezado">
     <div class="contenedor">
       <p class="etiqueta">JavaScript Avanzado · Semana 4</p>
-      <h1>Gestor inteligente de inventarios</h1>
+      <h1>Gestor inteligente de inventario</h1>
       <p class="introduccion">
         Objetos, arreglos, clases, colecciones y JSON aplicados a una solución web.
       </p>
     </div>
   </header>
+
   <main class="contenedor contenido">
     <section class="panel" aria-labelledby="titulo-registro">
       <h2 id="titulo-registro">Registrar producto</h2>
@@ -50,6 +51,7 @@
       </form>
       <div id="mensajes" class="mensajes" role="alert" hidden></div>
     </section>
+
     <section class="panel" aria-labelledby="titulo-catalogo">
       <div class="cabecera-seccion">
         <div>
@@ -95,6 +97,7 @@
       </div>
       <p id="estadoVacio" class="estado-vacio" hidden>No se encontraron productos.</p>
     </section>
+
     <section class="panel" aria-labelledby="titulo-resumen">
       <h2 id="titulo-resumen">Resumen del inventario</h2>
       <dl class="metricas">
@@ -105,6 +108,7 @@
       </dl>
       <p id="alertaStock" class="alerta" role="status"></p>
     </section>
+
     <section class="panel" aria-labelledby="titulo-json">
       <h2 id="titulo-json">Intercambio mediante JSON</h2>
       <p>Exporta los objetos actuales o pega un arreglo JSON válido para reconstruir el inventario.</p>

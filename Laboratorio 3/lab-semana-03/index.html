@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de Perfiles</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Analizador y normalizador de perfiles</h1>
+        <p class="description">
+            Ingresa tus datos para normalizar el perfil y analizar la información.
+        </p>
+
+        <form id="profileForm">
+            <div class="form-group">
+                <label for="fullName">Nombre completo</label>
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Ej. ana maría pérez"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Ej. ana@utp.edu.pe"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Teléfono peruano</label>
+                <input
+                    type="text"
+                    id="phone"
+                    placeholder="Ej. 987 654 321"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="bio">Biografía breve</label>
+                <textarea
+                    id="bio"
+                    maxlength="300"
+                    rows="6"
+                    placeholder="Escribe una breve biografía..."
+                ></textarea>
+
+                <p id="counter">0/300 unidades UTF-16</p>
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Analizar perfil</button>
+                <button type="reset" id="resetButton">Limpiar</button>
+            </div>
+        </form>
+
+        <section id="result" class="result" hidden>
+            <h2>Resultado del análisis</h2>
+
+            <div class="result-item">
+                <strong>Nombre normalizado:</strong>
+                <span id="resultName"></span>
+            </div>
+
+            <div class="result-item">
+                <strong>Correo:</strong>
+                <span id="resultEmail"></span>
+            </div>
+
+            <div class="result-item">
+                <strong>Teléfono:</strong>
+                <span id="resultPhone"></span>
+            </div>
+
+            <div class="result-item">
+                <strong>Biografía:</strong>
+                <span id="resultBio"></span>
+            </div>
+
+            <div class="result-item">
+                <strong>Cantidad de palabras:</strong>
+                <span id="resultWords"></span>
+            </div>
+
+            <div class="result-item">
+                <strong>Puntos de código Unicode:</strong>
+                <span id="resultUnicode"></span>
+            </div>
+
+            <div class="result-item">
+                <strong>Hashtags:</strong>
+                <span id="resultHashtags"></span>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

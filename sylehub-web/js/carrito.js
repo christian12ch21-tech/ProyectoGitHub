@@ -9,13 +9,19 @@ const cuponesValidos = {
     "BIENVENIDO": 15
 };
 
+
 function guardarCarrito() {
     localStorage.setItem("carritoStyleHub", JSON.stringify(carrito));
 }
 
+
+
 function guardarCupon() {
     localStorage.setItem("cuponStyleHub", JSON.stringify(cuponActivo));
 }
+
+
+
 
 export function agregarAlCarrito(id) {
     const producto = obtenerProductoPorId(id);
@@ -41,6 +47,7 @@ export function agregarAlCarrito(id) {
     }
 
     guardarCarrito();
+  
     return { exito: true, mensaje: `${producto.nombre} agregado al carrito` };
 }
 
@@ -55,6 +62,7 @@ export function aumentarCantidad(id) {
     guardarCarrito();
 }
 
+
 export function disminuirCantidad(id) {
     const item = carrito.find((p) => p.id === id);
     item.cantidad--;
@@ -64,10 +72,12 @@ export function disminuirCantidad(id) {
     guardarCarrito();
 }
 
+
 export function eliminarDelCarrito(id) {
     carrito = carrito.filter((item) => item.id !== id);
     guardarCarrito();
 }
+
 
 export function vaciarCarrito() {
     carrito.length = 0;
@@ -75,6 +85,7 @@ export function vaciarCarrito() {
     guardarCarrito();
     guardarCupon();
 }
+
 
 export function aplicarCupon(codigo) {
     try {
@@ -108,3 +119,6 @@ export function calcularTotal() {
 export function contarItems() {
     return carrito.reduce((acc, item) => acc + item.cantidad, 0);
 }
+
+
+

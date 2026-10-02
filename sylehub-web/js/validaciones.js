@@ -1,4 +1,4 @@
-// ===== Validaciones reutilizables con expresiones regulares y try-catch =====
+
 
 export function validarEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

@@ -1,4 +1,4 @@
-// ===== CLASE PRODUCTO =====
+
 export class Producto {
     constructor(id, nombre, precio, talla, imagen, stock, categoria, descuento = 0) {
         this.id = id;
@@ -8,7 +8,7 @@ export class Producto {
         this.imagen = imagen;
         this.stock = stock;
         this.categoria = categoria;
-        this.descuento = descuento; // porcentaje, 0 = sin oferta
+        this.descuento = descuento; 
     }
 
     aplicarIGV() {
@@ -29,7 +29,7 @@ export class Producto {
     }
 }
 
-// ===== ARREGLO DE PRODUCTOS (25 productos, algunos con descuento) =====
+
 export let productos = [
     new Producto(1,  "Polo Básico Blanco",       39.90,  "S",  "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop", 30, "polos"),
     new Producto(2,  "Polo Básico Negro",        39.90,  "M",  "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop", 30, "polos", 15),
@@ -58,7 +58,7 @@ export let productos = [
     new Producto(25, "Correa de Cuero",             59.90, "Única", "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=400&h=400&fit=crop", 30, "accesorios")
 ];
 
-// ===== BUSCAR PRODUCTO POR ID (con try-catch) =====
+
 export function obtenerProductoPorId(id) {
     try {
         const producto = productos.find((p) => p.id === id);
@@ -70,29 +70,27 @@ export function obtenerProductoPorId(id) {
     }
 }
 
-// ===== BUSCADOR POR NOMBRE (regex) =====
 export function buscarProductoPorNombre(texto) {
     const regex = new RegExp(texto, "i");
     return productos.filter((p) => regex.test(p.nombre));
 }
 
-// ===== FILTRAR POR CATEGORÍA =====
+
 export function filtrarPorCategoria(categoria) {
     if (categoria === "todos") return productos;
     return productos.filter((p) => p.categoria === categoria);
 }
 
-// ===== FILTRAR POR RANGO DE PRECIO =====
 export function filtrarPorPrecio(min, max) {
     return productos.filter((p) => p.precio >= min && p.precio <= max);
 }
 
-// ===== OBTENER PRODUCTOS EN OFERTA =====
+
 export function obtenerProductosEnOferta() {
     return productos.filter((p) => p.tieneDescuento());
 }
 
-// ===== ORDENAR PRODUCTOS =====
+
 export function ordenarPorPrecio(lista, ascendente = true) {
     return [...lista].sort((a, b) =>
         ascendente ? a.precio - b.precio : b.precio - a.precio
@@ -103,13 +101,12 @@ export function ordenarPorNombre(lista) {
     return [...lista].sort((a, b) => a.nombre.localeCompare(b.nombre));
 }
 
-// ===== OBTENER LISTA DE CATEGORÍAS ÚNICAS =====
 export function obtenerCategorias() {
     const categorias = new Set(productos.map((p) => p.categoria));
     return ["todos", ...categorias];
 }
 
-// ===== CRUD para el panel admin =====
+
 function guardarProductosEnStorage() {
     localStorage.setItem("productosStyleHub", JSON.stringify(productos));
 }

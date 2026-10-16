@@ -1,0 +1,57 @@
+<h1 class="h3 mb-3">Finalizar compra</h1>
+@if (carrito.items().length === 0) {
+  <p>No tienes productos en el carrito.</p>
+  <a routerLink="/" class="btn btn-sh">Ir al catálogo</a>
+} @else {
+  <div class="row g-4">
+    <form class="col-lg-7" [formGroup]="form" (ngSubmit)="confirmar()" novalidate>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre completo</label>
+        <input id="nombre" class="form-control" formControlName="nombre" [class.is-invalid]="invalido('nombre')" />
+        <div class="invalid-feedback">Mínimo 3 caracteres.</div>
+      </div>
+      <div class="mb-3">
+        <label for="direccion" class="form-label">Dirección de envío</label>
+        <input id="direccion" class="form-control" formControlName="direccion" [class.is-invalid]="invalido('direccion')" />
+        <div class="invalid-feedback">Ingresa una dirección completa (mín. 8 caracteres).</div>
+      </div>
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input id="telefono" inputmode="numeric" maxlength="9" class="form-control" formControlName="telefono" [class.is-invalid]="invalido('telefono')" />
+        <div class="invalid-feedback">Debe tener exactamente 9 dígitos.</div>
+      </div>
+      <fieldset class="mb-3">
+        <legend class="form-label fs-6">Método de pago</legend>
+        @for (m of ['tarjeta', 'yape', 'plin']; track m) {
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" [id]="'pago-' + m" [value]="m" formControlName="metodoPago" />
+            <label class="form-check-label text-capitalize" [for]="'pago-' + m">{{ m }}</label>
+          </div>
+        }
+      </fieldset>
+      @if (error()) {
+        <p role="alert" class="text-danger">{{ error() }}</p>
+      }
+      <button type="submit" class="btn btn-sh" [disabled]="guardando()">
+        {{ guardando() ? 'Procesando...' : 'Confirmar compra' }}
+      </button>
+    </form>
+    <aside class="col-lg-5">
+      <div class="card card-body">
+        <h2 class="h5">Resumen</h2>
+        <ul class="list-unstyled">
+          @for (i of carrito.items(); track i.id) {
+            <li class="d-flex justify-content-between">
+              <span>{{ i.cantidad }} × {{ i.nombre }}</span>
+              <span>{{ i.precioUnitario * i.cantidad | currency: 'PEN' : 'S/ ' }}</span>
+            </li>
+          }
+        </ul>
+        @if (carrito.cupon(); as c) {
+          <p class="text-success mb-1">Cupón {{ c.codigo }}: −{{ carrito.descuentoCupon() | currency: 'PEN' : 'S/ ' }}</p>
+        }
+        <p class="fs-5 fw-bold mb-0">Total: {{ carrito.total() | currency: 'PEN' : 'S/ ' }}</p>
+      </div>
+    </aside>
+  </div>
+}

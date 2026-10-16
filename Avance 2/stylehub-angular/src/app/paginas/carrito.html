@@ -1,0 +1,73 @@
+<h1 class="h3 mb-3">Carrito de compras</h1>
+@if (carrito.items().length === 0) {
+  <p>Tu carrito está vacío.</p>
+  <a routerLink="/" class="btn btn-sh">Ir al catálogo</a>
+} @else {
+  <div class="table-responsive">
+    <table class="table align-middle">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of carrito.items(); track item.id) {
+          <tr>
+            <td>
+              <img [src]="item.imagen" [alt]="item.nombre" width="48" height="48" class="rounded me-2" />
+              {{ item.nombre }} <small class="text-body-secondary">(T. {{ item.talla }})</small>
+            </td>
+            <td>{{ item.precioUnitario | currency: 'PEN' : 'S/ ' }}</td>
+            <td>
+              <div class="btn-group" role="group" [attr.aria-label]="'Cantidad de ' + item.nombre">
+                <button type="button" class="btn btn-outline-secondary btn-sm" (click)="carrito.cambiarCantidad(item.id, -1)" aria-label="Disminuir">−</button>
+                <span class="btn btn-sm disabled">{{ item.cantidad }}</span>
+                <button type="button" class="btn btn-outline-secondary btn-sm" (click)="carrito.cambiarCantidad(item.id, 1)" [disabled]="item.cantidad >= item.stock" aria-label="Aumentar">+</button>
+              </div>
+            </td>
+            <td>{{ item.precioUnitario * item.cantidad | currency: 'PEN' : 'S/ ' }}</td>
+            <td>
+              <button type="button" class="btn btn-outline-danger btn-sm" (click)="carrito.eliminar(item.id)">Quitar</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label for="cupon" class="form-label">Código de cupón</label>
+      <div class="input-group">
+        <input
+          id="cupon"
+          class="form-control"
+          placeholder="STYLE10, STYLE20, BIENVENIDO"
+          [ngModel]="codigo()"
+          (ngModelChange)="codigo.set($event)"
+          (keyup.enter)="aplicarCupon()"
+        />
+        <button type="button" class="btn btn-outline-primary" (click)="aplicarCupon()">Aplicar</button>
+      </div>
+      @if (carrito.cupon(); as c) {
+        <p class="mt-2 mb-0">
+          Cupón <strong>{{ c.codigo }}</strong> (-{{ c.descuento }}%)
+          <button type="button" class="btn btn-link btn-sm" (click)="carrito.quitarCupon()">Quitar</button>
+        </p>
+      }
+    </div>
+    <div class="col-md-6 text-md-end">
+      <p class="mb-1">Subtotal: {{ carrito.subtotal() | currency: 'PEN' : 'S/ ' }}</p>
+      @if (carrito.cupon()) {
+        <p class="mb-1 text-success">Cupón: −{{ carrito.descuentoCupon() | currency: 'PEN' : 'S/ ' }}</p>
+      }
+      <p class="fs-4 fw-bold">Total: {{ carrito.total() | currency: 'PEN' : 'S/ ' }}</p>
+      <button type="button" class="btn btn-outline-danger me-2" (click)="carrito.vaciar()">Vaciar carrito</button>
+      <button type="button" class="btn btn-sh" (click)="finalizar()">Finalizar compra</button>
+    </div>
+  </div>
+}

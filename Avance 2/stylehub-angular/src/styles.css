@@ -1,0 +1,45 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --sh-primario: #6c3df4;
+  --sh-primario-oscuro: #4b22c4;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.tarjeta-producto img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.precio-original {
+  text-decoration: line-through;
+  color: var(--bs-secondary-color);
+}
+
+.btn-sh {
+  background: var(--sh-primario);
+  border-color: var(--sh-primario);
+  color: #fff;
+}
+.btn-sh:hover {
+  background: var(--sh-primario-oscuro);
+  border-color: var(--sh-primario-oscuro);
+  color: #fff;
+}
+
+.hero {
+  background: linear-gradient(120deg, var(--sh-primario), #ff5f8d);
+  color: #fff;
+  border-radius: 1rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #ffb400;
+  outline-offset: 3px;
+}

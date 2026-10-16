@@ -1,0 +1,47 @@
+<article
+  class="card h-100 tarjeta-producto position-relative"
+  [ngClass]="{ 'border-danger': producto().stock === 0 }"
+  [ngStyle]="{ opacity: producto().stock === 0 ? 0.6 : 1 }"
+>
+  @if (producto().descuento > 0) {
+    <span class="badge text-bg-danger position-absolute top-0 start-0 m-2">
+      -{{ producto().descuento }}%
+    </span>
+  }
+  <button
+    type="button"
+    class="btn btn-light btn-sm position-absolute top-0 end-0 m-2"
+    (click)="alternarFavorito.emit(producto())"
+    [attr.aria-label]="favorito() ? 'Quitar de favoritos' : 'Agregar a favoritos'"
+    [attr.aria-pressed]="favorito()"
+  >
+    {{ favorito() ? '❤️' : '🤍' }}
+  </button>
+  <img [src]="producto().imagen" [alt]="producto().nombre" class="card-img-top" />
+  <div class="card-body d-flex flex-column">
+    <span class="badge text-bg-secondary align-self-start mb-2">
+      {{ producto().categoria | titlecase }}
+    </span>
+    <h3 class="h6">{{ producto().nombre }}</h3>
+    <p class="mb-1 small">Talla: {{ producto().talla }}</p>
+    @if (producto().descuento > 0) {
+      <p class="precio-original mb-0">
+        {{ producto().precio | precioConIgv | currency: 'PEN' : 'S/ ' }}
+      </p>
+    }
+    <p class="fw-bold fs-5 mb-1">
+      {{ producto() | precioFinal | currency: 'PEN' : 'S/ ' }}
+    </p>
+    <p class="small mb-3" [appStockBajo]="producto().stock">
+      {{ producto().stock | estadoStock }}
+    </p>
+    <button
+      type="button"
+      class="btn btn-sh mt-auto"
+      [disabled]="producto().stock === 0"
+      (click)="agregar.emit(producto())"
+    >
+      Agregar al carrito
+    </button>
+  </div>
+</article>

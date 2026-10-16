@@ -1,0 +1,264 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Polo Básico Blanco",
+      "precio": 39.9,
+      "talla": "S",
+      "imagen": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "polos",
+      "descuento": 0
+    },
+    {
+      "id": "2",
+      "nombre": "Polo Básico Negro",
+      "precio": 39.9,
+      "talla": "M",
+      "imagen": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "polos",
+      "descuento": 15
+    },
+    {
+      "id": "3",
+      "nombre": "Polo Estampado",
+      "precio": 45.9,
+      "talla": "L",
+      "imagen": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "polos",
+      "descuento": 0
+    },
+    {
+      "id": "4",
+      "nombre": "Polo Rayas",
+      "precio": 42.9,
+      "talla": "XL",
+      "imagen": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "polos",
+      "descuento": 0
+    },
+    {
+      "id": "5",
+      "nombre": "Jean Slim Fit Azul",
+      "precio": 89.9,
+      "talla": "30",
+      "imagen": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "jeans",
+      "descuento": 20
+    },
+    {
+      "id": "6",
+      "nombre": "Jean Slim Fit Negro",
+      "precio": 89.9,
+      "talla": "32",
+      "imagen": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "jeans",
+      "descuento": 0
+    },
+    {
+      "id": "7",
+      "nombre": "Jean Recto Clásico",
+      "precio": 79.9,
+      "talla": "34",
+      "imagen": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "jeans",
+      "descuento": 0
+    },
+    {
+      "id": "8",
+      "nombre": "Jean Ancho Baggy",
+      "precio": 94.9,
+      "talla": "36",
+      "imagen": "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "jeans",
+      "descuento": 0
+    },
+    {
+      "id": "9",
+      "nombre": "Casaca Denim Azul",
+      "precio": 129.9,
+      "talla": "M",
+      "imagen": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "casacas",
+      "descuento": 25
+    },
+    {
+      "id": "10",
+      "nombre": "Casaca Bomber Negra",
+      "precio": 139.9,
+      "talla": "L",
+      "imagen": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "casacas",
+      "descuento": 0
+    },
+    {
+      "id": "11",
+      "nombre": "Casaca Impermeable",
+      "precio": 119.9,
+      "talla": "XL",
+      "imagen": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "casacas",
+      "descuento": 0
+    },
+    {
+      "id": "12",
+      "nombre": "Zapatillas Urbanas Blancas",
+      "precio": 149.9,
+      "talla": "40",
+      "imagen": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "calzado",
+      "descuento": 0
+    },
+    {
+      "id": "13",
+      "nombre": "Zapatillas Deportivas",
+      "precio": 169.9,
+      "talla": "42",
+      "imagen": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "calzado",
+      "descuento": 10
+    },
+    {
+      "id": "14",
+      "nombre": "Botines Casuales",
+      "precio": 189.9,
+      "talla": "43",
+      "imagen": "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "calzado",
+      "descuento": 0
+    },
+    {
+      "id": "15",
+      "nombre": "Sandalias Urbanas",
+      "precio": 69.9,
+      "talla": "41",
+      "imagen": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "calzado",
+      "descuento": 0
+    },
+    {
+      "id": "16",
+      "nombre": "Polera con Capucha Gris",
+      "precio": 99.9,
+      "talla": "M",
+      "imagen": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "poleras",
+      "descuento": 0
+    },
+    {
+      "id": "17",
+      "nombre": "Polera Oversize Negra",
+      "precio": 95.9,
+      "talla": "L",
+      "imagen": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "poleras",
+      "descuento": 30
+    },
+    {
+      "id": "18",
+      "nombre": "Buzo Conjunto Deportivo",
+      "precio": 254.9,
+      "talla": "M",
+      "imagen": "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "poleras",
+      "descuento": 0
+    },
+    {
+      "id": "19",
+      "nombre": "Short Deportivo",
+      "precio": 49.9,
+      "talla": "S",
+      "imagen": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "shorts",
+      "descuento": 0
+    },
+    {
+      "id": "20",
+      "nombre": "Short Cargo",
+      "precio": 54.9,
+      "talla": "M",
+      "imagen": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "shorts",
+      "descuento": 0
+    },
+    {
+      "id": "21",
+      "nombre": "Camisa Manga Larga",
+      "precio": 79.9,
+      "talla": "L",
+      "imagen": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "camisas",
+      "descuento": 0
+    },
+    {
+      "id": "22",
+      "nombre": "Camisa Cuadros",
+      "precio": 74.9,
+      "talla": "M",
+      "imagen": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "camisas",
+      "descuento": 0
+    },
+    {
+      "id": "23",
+      "nombre": "Camisa Formal Blanca",
+      "precio": 84.9,
+      "talla": "XL",
+      "imagen": "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "camisas",
+      "descuento": 0
+    },
+    {
+      "id": "24",
+      "nombre": "Gorra Snapback",
+      "precio": 39.9,
+      "talla": "Única",
+      "imagen": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "accesorios",
+      "descuento": 0
+    },
+    {
+      "id": "25",
+      "nombre": "Correa de Cuero",
+      "precio": 59.9,
+      "talla": "Única",
+      "imagen": "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=400&h=400&fit=crop",
+      "stock": 30,
+      "categoria": "accesorios",
+      "descuento": 0
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Administrador",
+      "email": "admin@stylehub.com",
+      "password": "admin123",
+      "rol": "admin"
+    }
+  ],
+  "pedidos": []
+}

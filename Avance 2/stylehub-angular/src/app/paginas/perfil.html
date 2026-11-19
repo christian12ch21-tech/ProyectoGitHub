@@ -1,0 +1,34 @@
+@if (auth.sesion(); as s) {
+  <h1 class="h3">Hola, {{ s.nombre }}</h1>
+  <p class="text-body-secondary">{{ s.email }}</p>
+}
+<h2 class="h5 mb-3">Historial de pedidos</h2>
+@if (cargando()) {
+  <p role="status">Cargando pedidos...</p>
+} @else if (error()) {
+  <p role="alert" class="text-danger">{{ error() }}</p>
+} @else if (pedidos().length === 0) {
+  <p>Aún no tienes pedidos.</p>
+  <a routerLink="/" class="btn btn-sh">Ir al catálogo</a>
+} @else {
+  @for (p of pedidos(); track p.id) {
+    <article class="card mb-3">
+      <div class="card-header d-flex justify-content-between">
+        <span>Pedido #{{ p.id }} · {{ p.fecha | date: 'dd/MM/yyyy HH:mm' }}</span>
+        <strong>{{ p.total | currency: 'PEN' : 'S/ ' }}</strong>
+      </div>
+      <ul class="list-group list-group-flush">
+        @for (i of p.items; track i.id) {
+          <li class="list-group-item d-flex justify-content-between">
+            <span>{{ i.cantidad }} × {{ i.nombre }}</span>
+            <span>{{ i.precioUnitario * i.cantidad | currency: 'PEN' : 'S/ ' }}</span>
+          </li>
+        }
+      </ul>
+      <div class="card-footer small text-body-secondary">
+        Envío a {{ p.direccion }} · Pago: {{ p.metodoPago }}
+        @if (p.cupon) { · Cupón {{ p.cupon.codigo }} }
+      </div>
+    </article>
+  }
+}

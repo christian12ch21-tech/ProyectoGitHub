@@ -1,0 +1,263 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Polo básico algodón",
+      "category": "Hombre",
+      "emoji": "👕",
+      "price": 39.9,
+      "discount": 0,
+      "stock": 30
+    },
+    {
+      "id": 2,
+      "name": "Camisa Oxford",
+      "category": "Hombre",
+      "emoji": "👔",
+      "price": 89.9,
+      "discount": 15,
+      "stock": 30
+    },
+    {
+      "id": 3,
+      "name": "Jean slim fit",
+      "category": "Hombre",
+      "emoji": "👖",
+      "price": 119.9,
+      "discount": 0,
+      "stock": 30
+    },
+    {
+      "id": 4,
+      "name": "Casaca bomber",
+      "category": "Hombre",
+      "emoji": "🧥",
+      "price": 159.9,
+      "discount": 20,
+      "stock": 30
+    },
+    {
+      "id": 5,
+      "name": "Short deportivo",
+      "category": "Hombre",
+      "emoji": "🩳",
+      "price": 49.9,
+      "discount": 0,
+      "stock": 30
+    },
+    {
+      "id": 6,
+      "name": "Polera con capucha",
+      "category": "Hombre",
+      "emoji": "🧥",
+      "price": 99.9,
+      "discount": 10,
+      "stock": 30
+    },
+    {
+      "id": 7,
+      "name": "Blusa floral",
+      "category": "Mujer",
+      "emoji": "👚",
+      "price": 69.9,
+      "discount": 0,
+      "stock": 30
+    },
+    {
+      "id": 8,
+      "name": "Vestido casual",
+      "category": "Mujer",
+      "emoji": "👗",
+      "price": 129.9,
+      "discount": 25,
+      "stock": 30
+    },
+    {
+      "id": 9,
+      "name": "Falda plisada",
+      "category": "Mujer",
+      "emoji": "👗",
+      "price": 79.9,
+      "discount": 0,
+      "stock": 30
+    },
+    {
+      "id": 10,
+      "name": "Jean mom fit",
+      "category": "Mujer",
+      "emoji": "👖",
+      "price": 119.9,
+      "discount": 10,
+      "stock": 30
+    },
+    {
+      "id": 11,
+      "name": "Top deportivo",
+      "category": "Mujer",
+      "emoji": "👚",
+      "price": 45.9,
+      "discount": 0,
+      "stock": 30
+    },
+    {
+      "id": 12,
+      "name": "Casaca denim",
+      "category": "Mujer",
+      "emoji": "🧥",
+      "price": 149.9,
+      "discount": 0,
+      "stock": 30
+    },
+    {
+      "id": 13,
+      "name": "Legging running",
+      "category": "Mujer",
+      "emoji": "🩳",
+      "price": 59.9,
+      "discount": 15,
+      "stock": 30
+    },
+    {
+      "id": 14,
+      "name": "Sandalias de verano",
+      "category": "Calzado",
+      "emoji": "🩴",
+      "price": 69.9,
+      "discount": 0,
+      "stock": 30
+    },
+    {
+      "id": 15,
+      "name": "Zapatillas urbanas",
+      "category": "Calzado",
+      "emoji": "👟",
+      "price": 189.9,
+      "discount": 20,
+      "stock": 30
+    },
+    {
+      "id": 16,
+      "name": "Botines de cuero",
+      "category": "Calzado",
+      "emoji": "👢",
+      "price": 229.9,
+      "discount": 0,
+      "stock": 30
+    },
+    {
+      "id": 17,
+      "name": "Zapatillas running",
+      "category": "Calzado",
+      "emoji": "👟",
+      "price": 209.9,
+      "discount": 10,
+      "stock": 30
+    },
+    {
+      "id": 18,
+      "name": "Gorra snapback",
+      "category": "Accesorios",
+      "emoji": "🧢",
+      "price": 34.9,
+      "discount": 0,
+      "stock": 30
+    },
+    {
+      "id": 19,
+      "name": "Bufanda de lana",
+      "category": "Accesorios",
+      "emoji": "🧣",
+      "price": 44.9,
+      "discount": 0,
+      "stock": 30
+    },
+    {
+      "id": 20,
+      "name": "Lentes de sol",
+      "category": "Accesorios",
+      "emoji": "🕶️",
+      "price": 79.9,
+      "discount": 30,
+      "stock": 30
+    },
+    {
+      "id": 21,
+      "name": "Mochila urbana",
+      "category": "Accesorios",
+      "emoji": "🎒",
+      "price": 109.9,
+      "discount": 0,
+      "stock": 30
+    },
+    {
+      "id": 22,
+      "name": "Cinturón de cuero",
+      "category": "Accesorios",
+      "emoji": "👜",
+      "price": 54.9,
+      "discount": 0,
+      "stock": 30
+    },
+    {
+      "id": 23,
+      "name": "Guantes térmicos",
+      "category": "Accesorios",
+      "emoji": "🧤",
+      "price": 39.9,
+      "discount": 15,
+      "stock": 30
+    },
+    {
+      "id": 24,
+      "name": "Sombrero de paja",
+      "category": "Accesorios",
+      "emoji": "👒",
+      "price": 49.9,
+      "discount": 0,
+      "stock": 30
+    },
+    {
+      "id": 25,
+      "name": "Calcetines pack x3",
+      "category": "Accesorios",
+      "emoji": "🧦",
+      "price": 24.9,
+      "discount": 0,
+      "stock": 30
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Administrador",
+      "email": "admin@stylehub.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Cliente Demo",
+      "email": "cliente@stylehub.com",
+      "password": "cliente123",
+      "role": "cliente"
+    }
+  ],
+  "coupons": [
+    {
+      "id": 1,
+      "code": "STYLE10",
+      "percent": 10
+    },
+    {
+      "id": 2,
+      "code": "UTP20",
+      "percent": 20
+    },
+    {
+      "id": 3,
+      "code": "BLACK30",
+      "percent": 30
+    }
+  ],
+  "orders": []
+}

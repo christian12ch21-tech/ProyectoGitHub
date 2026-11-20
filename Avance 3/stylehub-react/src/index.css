@@ -1,0 +1,42 @@
+body {
+  min-height: 100vh;
+}
+
+.product-emoji {
+  font-size: 4.5rem;
+  line-height: 1;
+  padding: 1.2rem 0;
+  background: var(--bs-tertiary-bg);
+  text-align: center;
+  position: relative;
+}
+
+.product-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.wish-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 0;
+  background: transparent;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}

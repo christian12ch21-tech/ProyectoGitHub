@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+  <div class="container d-flex flex-wrap align-items-center gap-3">
+    <a class="navbar-brand fw-bold" routerLink="/">StyleHub</a>
+    <div class="d-flex flex-wrap flex-grow-1 align-items-center gap-2">
+      <ul class="navbar-nav me-auto flex-row flex-wrap gap-3 m-0">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Catálogo</a
+          >
+        </li>
+        @if (auth.esAdmin()) {
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admin" routerLinkActive="active"
+              >⚙ Panel admin</a
+            >
+          </li>
+        }
+      </ul>
+      <div class="d-flex flex-wrap align-items-center gap-2">
+        <a class="btn btn-outline-secondary position-relative" routerLink="/carrito">
+          🛒 Carrito
+          <span class="badge text-bg-danger ms-1">{{ carrito.cantidad() }}</span>
+        </a>
+        @if (auth.sesion(); as s) {
+          @if (s.rol === 'cliente') {
+            <a class="btn btn-outline-primary" routerLink="/perfil">Hola, {{ s.nombre }}</a>
+          }
+          <button type="button" class="btn btn-outline-danger" (click)="salir()">
+            Salir
+          </button>
+        } @else {
+          <a class="btn btn-sh" routerLink="/login">Iniciar sesión</a>
+        }
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          (click)="tema.alternar()"
+          [attr.aria-label]="'Cambiar a modo ' + (tema.tema() === 'claro' ? 'oscuro' : 'claro')"
+        >
+          {{ tema.tema() === 'claro' ? '🌙' : '☀️' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+<main class="container py-4">
+  <router-outlet />
+</main>
+<footer class="container pb-4 text-body-secondary text-center">
+  &copy; 2026 StyleHub. Todos los derechos reservados.
+</footer>
+<app-toasts />

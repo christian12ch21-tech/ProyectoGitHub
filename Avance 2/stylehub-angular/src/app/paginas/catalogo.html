@@ -1,0 +1,98 @@
+<section class="hero p-5 mb-4">
+  <h1 class="display-6 fw-bold">Nueva Colección 2026</h1>
+  <p class="mb-0">Ropa urbana con estilo, calidad y los mejores precios</p>
+</section>
+
+<section class="row g-2 mb-4" aria-label="Filtros del catálogo">
+  <div class="col-12 col-md-5">
+    <input
+      type="search"
+      class="form-control"
+      placeholder="Buscar producto..."
+      aria-label="Buscar producto"
+      [ngModel]="buscar()"
+      (ngModelChange)="buscar.set($event)"
+    />
+  </div>
+  <div class="col-6 col-md-3">
+    <select
+      class="form-select"
+      aria-label="Categoría"
+      [ngModel]="categoria()"
+      (ngModelChange)="categoria.set($event)"
+    >
+      <option value="todos">Todas las categorías</option>
+      @for (c of categorias(); track c) {
+        <option [value]="c">{{ c }}</option>
+      }
+    </select>
+  </div>
+  <div class="col-6 col-md-4">
+    <select
+      class="form-select"
+      aria-label="Ordenar"
+      [ngModel]="orden()"
+      (ngModelChange)="orden.set($event)"
+    >
+      <option value="">Ordenar por...</option>
+      <option value="precio-asc">Precio: menor a mayor</option>
+      <option value="precio-desc">Precio: mayor a menor</option>
+      <option value="nombre">Nombre (A-Z)</option>
+    </select>
+  </div>
+</section>
+
+@if (cargando()) {
+  <p role="status">Cargando productos...</p>
+} @else if (error()) {
+  <p role="alert" class="text-danger">{{ error() }}</p>
+  <button type="button" class="btn btn-sh" (click)="cargar()">Reintentar</button>
+} @else {
+  <h2 class="h4 mb-3">Nuestros productos</h2>
+  @if (filtrados().length === 0) {
+    <p>No se encontraron productos con esos filtros.</p>
+  }
+  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 mb-5">
+    @for (p of filtrados(); track p.id) {
+      <div class="col">
+        <app-tarjeta-producto
+          [producto]="p"
+          [favorito]="wishlist.esFavorito(p.id)"
+          (agregar)="agregar($event)"
+          (alternarFavorito)="alternarFavorito($event)"
+        />
+      </div>
+    }
+  </div>
+
+  <h2 class="h4 mb-3">Ropa con descuento 🔥</h2>
+  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 mb-5">
+    @for (p of ofertas(); track p.id) {
+      <div class="col">
+        <app-tarjeta-producto
+          [producto]="p"
+          [favorito]="wishlist.esFavorito(p.id)"
+          (agregar)="agregar($event)"
+          (alternarFavorito)="alternarFavorito($event)"
+        />
+      </div>
+    }
+  </div>
+
+  <h2 class="h4 mb-3">Mis favoritos</h2>
+  @if (favoritos().length === 0) {
+    <p class="text-body-secondary">Aún no marcaste productos como favoritos.</p>
+  }
+  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+    @for (p of favoritos(); track p.id) {
+      <div class="col">
+        <app-tarjeta-producto
+          [producto]="p"
+          [favorito]="true"
+          (agregar)="agregar($event)"
+          (alternarFavorito)="alternarFavorito($event)"
+        />
+      </div>
+    }
+  </div>
+}
